@@ -11,7 +11,7 @@ root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
 from src.common.utilsAll.PerformanceMetrics import ModelPerformanceMetrics
-from src.algorithm.logistic_regression.MultiLogisticRegression\
+from src.algorithm.logistic_regression.multiLogisticRegression\
 import MultiLogisticRegressor
 
 

@@ -7,7 +7,7 @@ root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
 from src.common.utilsFile.filesio import FilesIO
-from src.algorithm.regression.MultiLinearRegression import MultiVarLinearRegression
+from src.algorithm.regression.multiLinearRegression import MultiVarLinearRegression
 
 
 
