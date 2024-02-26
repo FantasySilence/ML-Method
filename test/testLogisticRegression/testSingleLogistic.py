@@ -9,8 +9,9 @@ test_path = os.path.dirname(current_path)
 root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
-from src.logistic_regression.SingleLogisticRegression import LogisticRegressor
 from src.common.utilsAll.PerformanceMetrics import ModelPerformanceMetrics
+from src.algorithm.logistic_regression.SingleLogisticRegression\
+import LogisticRegressor
 
 
 

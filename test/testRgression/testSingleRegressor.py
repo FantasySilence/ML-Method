@@ -8,7 +8,7 @@ root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
 from src.common.utilsFile.filesio import FilesIO
-from src.regression.SinglelinearRegression import SingleVarLinearRegression
+from src.algorithm.regression.SinglelinearRegression import SingleVarLinearRegression
 
 
 

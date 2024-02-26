@@ -7,7 +7,9 @@ root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
 from src.common.utilsFile.filesio import FilesIO
-from src.regression.MultiLinearRegression import MultiVarLinearRegression
+from src.algorithm.regression.MultiLinearRegression import MultiVarLinearRegression
+
+
 
 url = FilesIO.getDataPath("Advertising.csv")
 attribute_list = ['TV', 'radio', 'newspaper']
