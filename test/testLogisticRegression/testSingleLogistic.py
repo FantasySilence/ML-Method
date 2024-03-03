@@ -25,7 +25,7 @@ model = LogisticRegressor(alpha=0.5, l1_ratio=0.5, batch_size=20,
 model.fit(X_train, y_train, X_test, y_test)
 print("L1正则化模型参数如下：\n", model.get_param())
 print("="*70)
-y_test_prob = model.predict_prob(X_test)
+y_test_prob = model.predict_proba(X_test)
 pm = ModelPerformanceMetrics(y_test, y_test_prob)
 print(pm.cal_classification_report())
 

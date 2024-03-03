@@ -194,7 +194,7 @@ class LogisticRegressor:
         return weight.reshape(-1), bias
     
 
-    def predict_prob(self, x_test):
+    def predict_proba(self, x_test):
 
         """
         预测测试样本的概率，第一列为y=0的概率，第二列为y=1的概率
