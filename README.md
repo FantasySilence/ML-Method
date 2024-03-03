@@ -7,6 +7,7 @@
 - 决策树[src/algorithm/decisiontree](src/algorithm/decisiontree)
 - KNN[src/algorithm/KNN](src/algorithm/KNN)
 - SVM[src/algorithm/SVM](src/algorithm/SVM)
+- LDA[src/algorithm/LDA](src/algorithm/LDA)
 
 ### 技术栈
 
