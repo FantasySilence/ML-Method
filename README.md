@@ -9,6 +9,7 @@
 - SVM[src/algorithm/SVM](src/algorithm/SVM)
 - LDA[src/algorithm/LDA](src/algorithm/LDA)
 - 朴素贝叶斯[src/algorithm/Bayes](src/algorithm/Bayes)
+- 集成学习[src/algorithm/boost](src/algorithm/boost)
 
 ### 技术栈
 
