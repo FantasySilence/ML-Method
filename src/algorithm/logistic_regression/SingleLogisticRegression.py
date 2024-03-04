@@ -104,7 +104,6 @@ class LogisticRegressor:
         return loss
 
 
-    # TODO 样本权重的加入
     def fit(self, x_train, y_train, x_test=None, y_test=None):
 
         """
