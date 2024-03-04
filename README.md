@@ -8,6 +8,7 @@
 - KNN[src/algorithm/KNN](src/algorithm/KNN)
 - SVM[src/algorithm/SVM](src/algorithm/SVM)
 - LDA[src/algorithm/LDA](src/algorithm/LDA)
+- 朴素贝叶斯[src/algorithm/Bayes](src/algorithm/Bayes)
 
 ### 技术栈
 
