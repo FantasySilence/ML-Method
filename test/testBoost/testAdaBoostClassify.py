@@ -10,8 +10,8 @@ root_path = os.path.dirname(test_path)
 sys.path.append(root_path)
 
 # 基学习器，决策树，逻辑回归，支持向量机
-from src.algorithm.decisiontree.decisionTree_C import DecisionTreeClassifier
 from src.algorithm.logistic_regression.singleLogisticRegression import LogisticRegressor
+from src.algorithm.decisiontree.decisionTree_C import DecisionTreeClassifier
 from src.algorithm.SVM.svm_smo_classifier import SVMClassifier
 
 from src.algorithm.boost.adaboost_C import AdaBoostClassifier
