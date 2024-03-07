@@ -157,28 +157,42 @@ class MultiVarLinearRegression:
         self.F_test()
         self.t_test()
 
-        print("\t"+"回归统计")
-        print("="*26)
-        print("复相关系数\t%.8f"%np.sqrt(self.r2))
-        print("拟合优度R2\t%.8f"%self.r2)
-        print("修正后的R2\t%.8f"%self.r2_adj)
-        print("标准误差\t%.8f"%self.rmse)
-        print("观测值\t\t%d"%self.n)
-        print("="*26)
+        print("{:^25s}".format("回归统计"))
+        print("="*30)
+        print("{:10s}\t{:.8f}".format("相关系数", np.sqrt(self.r2)))
+        print("{:10s}\t{:.8f}".format("拟合优度R2", self.r2))
+        print("{:10s}\t{:.8f}".format("修正后的R2", self.r2_adj))
+        print("{:10s}\t{:.8f}".format("标准误差", self.rmse))
+        print("{:10s}\t{:d}".format("观测值", self.n))
+        print("="*30)
         print()
         print("方差分析")
         print("="*95)
-        print("\t\t平方和(SS)\t自由度(df)\t均方(MS)\tF统计量\t\tP值")
-        print("回归\t\t%.8f\t%d\t\t%.8f\t%.8f\t%e"%(self.SSE,self.k,(self.SSE/self.k),self.F,self.fp))
-        print("残差\t\t%.8f\t%d\t\t%.8f"%(self.SSR,self.df,(self.SSR/self.df)))
-        print("总体\t\t%.8f\t%d"%(self.SST,self.n-1))
+        print("\t\t{:10s}\t{:10s}\t{:10}\t{:10s}\t{:10s}".format(
+            "平方和(SS)", "自由度(df)", "均方(MS)", "F统计量", "P值"
+        ))
+        print("{:10s}\t{:10f}\t{:10d}\t{:10f}\t{:10f}\t{:10e}".format(
+            "回归分析", self.SSE, self.k, self.SSE/self.k, self.F,self.fp
+        ))
+        print("{:10s}\t{:10f}\t{:10d}\t{:10f}".format(
+            "残差", self.SSR, self.df, self.SSR/self.df
+        ))
+        print("{:10s}\t{:10f}\t{:10d}".format(
+            "总体", self.SST, self.n-1
+        ))
         print("="*95)
         print()
-        print("="*120)
-        print("  \t\t回归系数\t标准误差\tt统计量\t\tp值\t\t下限95%\t\t上限95%")
-        print("%s\t\t%.8f\t%.8f\t%.8f\t%e\t%.8f\t%.8f"%("截距项", self.w[0],
-            self.w_ms[0],self.t_stat[0],self.tp[0],(self.w[0]-self.confidence[0]),self.w[0]+self.confidence[0]))
+        print("="*100)
+        print("\t{:8s}\t{:8s}\t{:8s}\t{:8s}\t{:8s}\t{:8s}".format(
+            "回归系数", "标准误差", "t统计量", "p值", "下限95%", "上限95%"
+        ))
+        print("{:4s}\t{:8f}\t{:8f}\t{:8f}\t{:8e}\t{:8f}\t{:8f}".format(
+            "截距项", self.w[0], self.w_ms[0], self.t_stat[0],
+            self.tp[0], self.w[0]-self.confidence[0], self.w[0]+self.confidence[0]
+        ))
         for i in range(1, self.k+1):
-            print("%s\t\t%.8f\t%.8f\t%.8f\t%e\t%.8f\t%.8f"%(self.attr_label[i-1], self.w[i],
-            self.w_ms[i],self.t_stat[i],self.tp[i],(self.w[i]-self.confidence[i]),self.w[i]+self.confidence[i]))
-        print("="*120)
+            print("{:4s}\t{:8f}\t{:8f}\t{:8f}\t{:8e}\t{:8f}\t{:8f}".format(
+                self.attr_label[i-1][:4], self.w[i], self.w_ms[i], self.t_stat[i],
+                self.tp[i], self.w[i]-self.confidence[i], self.w[i]+self.confidence[i]
+            ))
+        print("="*100)

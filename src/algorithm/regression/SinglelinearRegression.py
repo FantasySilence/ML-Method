@@ -322,25 +322,39 @@ class SingleVarLinearRegression:
             print("拟合方程为：y = %.10f*x%.10f"%(self.w, self.b))
         print("-"*100)
         print()
-        print("\t    "+"回归统计")
-        print("="*32)
-        print("%3s%24s"%('相关系数',round(np.sqrt(self.r2),8)))
-        print("%5s%22s"%('拟合优度R2',round(self.r2,8)))
-        print("%5s%22s"%("修正后的R2",round(self.r2_adj,8)))
-        print("%3s%24s"%('标准误差',round(self.rmse,8)))
-        print("%3s%18s"%('观测值',self.n))
-        print("="*32)
+        print("{:^25s}".format("回归统计"))
+        print("="*30)
+        print("{:10s}\t{:.8f}".format("相关系数", np.sqrt(self.r2)))
+        print("{:10s}\t{:.8f}".format("拟合优度R2", self.r2))
+        print("{:10s}\t{:.8f}".format("修正后的R2", self.r2_adj))
+        print("{:10s}\t{:.8f}".format("标准误差", self.rmse))
+        print("{:10s}\t{:d}".format("观测值", self.n))
+        print("="*30)
         print()
         print("方差分析")
-        print("="*95)
-        print("\t\t平方和(SS)\t自由度(df)\t均方(MS)\tF统计量\t\tP值")
-        print("回归分析\t%.8f\t%d\t\t%.8f\t%.8f\t%e"%(self.ESS,1,self.ESS,self.F,self.p))
-        print("残差\t\t%.8f\t%d\t\t%.8f"%(self.RSS,self.df,(self.RSS/self.df)))
-        print("总体\t\t%.8f\t%d"%(self.TSS,self.n-1))
-        print("="*95)
+        print("="*90)
+        print("\t\t{:10s}\t{:10s}\t{:10}\t{:10s}\t{:10s}".format(
+            "平方和(SS)", "自由度(df)", "均方(MS)", "F统计量", "P值"
+        ))
+        print("{:10s}\t{:10f}\t{:10d}\t{:10f}\t{:10f}\t{:10e}".format(
+            "回归分析", self.ESS, 1 ,self.ESS, self.F, self.p
+        ))
+        print("{:10s}\t{:10f}\t{:10d}\t{:10f}".format(
+            "残差", self.RSS, self.df ,self.RSS/self.df
+        ))
+        print("{:10s}\t{:10f}\t{:10d}".format(
+            "总体", self.TSS, self.n-1
+        ))
+        print("="*90)
         print()
         print("="*100)
-        print("  \t回归系数\t标准误差\tt统计量\t\tp值\t\t下限95%\t\t上限95%")
-        print("截距项\t%.8f\t%.8f\t%.8f\t%e\t%.8f\t%.8f"%(self.b,self.b_ms,self.b_t,self.b_p,self.b_internal[0],self.b_internal[1]))
-        print(self.x_label+"\t%.8f\t%.8f\t%.8f\t%e\t%.8f\t%.8f"%(self.w,self.w_ms,self.w_t,self.w_p,self.w_internal[0],self.w_internal[1]))
+        print("\t{:8s}\t{:8s}\t{:8s}\t{:8s}\t{:8s}\t{:8s}".format(
+            "回归系数", "标准误差", "t统计量", "p值", "下限95%", "上限95%"
+        ))
+        print("{:4s}\t{:8f}\t{:8f}\t{:8f}\t{:8e}\t{:8f}\t{:8f}".format(
+            "截距项", self.b, self.b_ms, self.b_t, self.b_p, self.b_internal[0], self.b_internal[1]
+        ))
+        print("{:4s}\t{:8f}\t{:8f}\t{:8f}\t{:8e}\t{:8f}\t{:8f}".format(
+            self.x_label[:4], self.w, self.w_ms, self.w_t, self.w_p, self.w_internal[0], self.w_internal[1]
+        ))
         print("="*100)
