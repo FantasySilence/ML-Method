@@ -7,10 +7,11 @@ from sklearn.metrics import r2_score
 current_path = os.path.dirname(os.path.abspath(__file__))
 test_path = os.path.dirname(current_path)
 root_path = os.path.dirname(test_path)
+root_path = os.path.dirname(root_path)
 sys.path.append(root_path)
 np.random.seed(0)
 
-from src.algorithm.boost.bagging_C_R import BaggingClassifierRegressor
+from src.algorithm.ensemble.bagging.bagging_C_R import BaggingClassifierRegressor
 from src.algorithm.decisiontree.decisionTree_R import DecisionTreeRegressor
 
 

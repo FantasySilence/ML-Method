@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 current_path = os.path.dirname(os.path.abspath(__file__))
 test_path = os.path.dirname(current_path)
 root_path = os.path.dirname(test_path)
+root_path = os.path.dirname(root_path)
 sys.path.append(root_path)
 
 # 基学习器，决策树，逻辑回归，支持向量机
@@ -14,7 +15,7 @@ from src.algorithm.logistic_regression.singleLogisticRegression import LogisticR
 from src.algorithm.decisiontree.decisionTree_C import DecisionTreeClassifier
 from src.algorithm.SVM.svm_smo_classifier import SVMClassifier
 
-from src.algorithm.boost.adaboost_C import AdaBoostClassifier
+from src.algorithm.ensemble.boost.adaboost_C import AdaBoostClassifier
 from src.common.utilsBoost.decisionBorder import plt_decision_border
 
 

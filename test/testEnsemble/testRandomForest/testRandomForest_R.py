@@ -11,10 +11,12 @@ from sklearn.model_selection import train_test_split
 current_path = os.path.dirname(os.path.abspath(__file__))
 test_path = os.path.dirname(current_path)
 root_path = os.path.dirname(test_path)
+root_path = os.path.dirname(root_path)
 sys.path.append(root_path)
 
 from src.common.utilsFile.filesio import FilesIO
-from src.algorithm.boost.randomForest_C_R import RandomForestClassifierRegressor
+from src.algorithm.ensemble.randomForest.randomForest_C_R\
+import RandomForestClassifierRegressor
 from src.algorithm.decisiontree.decisionTree_R import DecisionTreeRegressor
 
 

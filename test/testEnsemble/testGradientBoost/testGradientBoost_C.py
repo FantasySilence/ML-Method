@@ -7,9 +7,11 @@ from sklearn.model_selection import train_test_split
 current_path = os.path.dirname(os.path.abspath(__file__))
 test_path = os.path.dirname(current_path)
 root_path = os.path.dirname(test_path)
+root_path = os.path.dirname(root_path)
 sys.path.append(root_path)
 
-from src.algorithm.boost.gradientBoost_C import GradientBoostClassifier
+from src.algorithm.ensemble.gradientBoost.gradientBoost_C\
+import GradientBoostClassifier
 from src.algorithm.decisiontree.decisionTree_R import DecisionTreeRegressor
 
 
