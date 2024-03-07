@@ -9,7 +9,11 @@
 - SVM[src/algorithm/SVM](src/algorithm/SVM)
 - LDA[src/algorithm/LDA](src/algorithm/LDA)
 - 朴素贝叶斯[src/algorithm/Bayes](src/algorithm/Bayes)
-- 集成学习[src/algorithm/boost](src/algorithm/boost)
+- 集成学习
+    - AdaBoost 和 BoostingTree提升树[src/algorithm/ensemble/boost](src/algorithm/ensemble/boost)
+    - GradientBoost梯度提升[src/algorithm/ensemble/gradientBoost](src/algorithm/ensemble/gradientBoost)
+    - Bagging[src/algorithm/ensemble/bagging](src/algorithm/ensemble/bagging)
+    - 随机森林RandomForest[src/algorithm/ensemble/randomForest](src/algorithm/ensemble/randomForest)
 
 ### 技术栈
 
