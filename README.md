@@ -15,6 +15,10 @@
     - Bagging[src/algorithm/ensemble/bagging](src/algorithm/ensemble/bagging)
     - 随机森林RandomForest[src/algorithm/ensemble/randomForest](src/algorithm/ensemble/randomForest)
 
+### 算法介绍
+
+<center> 更新中…… </center>
+
 ### 技术栈
 
 Python
