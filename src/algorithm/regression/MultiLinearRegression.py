@@ -156,7 +156,6 @@ class MultiVarLinearRegression:
         self.R_square()
         self.F_test()
         self.t_test()
-
         print("{:^25s}".format("回归统计"))
         print("="*30)
         print("{:10s}\t{:.8f}".format("相关系数", np.sqrt(self.r2)))
